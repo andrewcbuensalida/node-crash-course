@@ -8,7 +8,7 @@ require("dotenv").config();
 const app = express();
 
 // connect to mongodb & listen for requests
-const dbURI = `mongodb+srv://andrewcbuensalida:${DB_PW}@cluster0.okm5c.mongodb.net/net-ninja?retryWrites=true&w=majority`;
+const dbURI = `mongodb+srv://andrewcbuensalida:${process.env.DB_PW}@cluster0.okm5c.mongodb.net/net-ninja?retryWrites=true&w=majority`;
 
 mongoose
 	.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
