@@ -39,7 +39,7 @@ app.get("/about", (req, res) => {
 // blog routes
 app.use("/blogs", blogRoutes);
 
-// 404 page
+// 404 page. could either be app.get('*') OR app.all('*') OR
 app.use((req, res) => {
 	res.status(404).render("404", { title: "404" });
 });
