@@ -12,7 +12,7 @@ const dbURI = `mongodb+srv://andrewcbuensalida:${process.env.DB_PW}@cluster0.okm
 
 mongoose
 	.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
-	.then((result) => app.listen(3000))
+	.then((result) => app.listen(5000, () => console.log("Listening to 5000")))
 	.catch((err) => console.log(err));
 
 // register view engine
