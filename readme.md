@@ -8,3 +8,6 @@ ssl in aws
 for ci/cd, use cloud build to auto deploy from github. https://www.youtube.com/watch?v=Zd014DjonqE&t=498s
 except in the cloudbuild.yaml, for the deploy
 step, just did run start
+for environment variables, i think i just manually went in cloud shell
+and added .env file for first time. i think it stays there even
+if there's an auto deploy from github.
