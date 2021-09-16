@@ -10,7 +10,7 @@ const app = express();
 // connect to mongodb & listen for requests
 const dbURI = `mongodb+srv://andrewcbuensalida:${process.env.DB_PW}@cluster0.okm5c.mongodb.net/net-ninja?retryWrites=true&w=majority`;
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8080;
 mongoose
 	.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
 	.then((result) =>
