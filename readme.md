@@ -11,3 +11,5 @@ except in the cloudbuild.yaml, for the deploy
 step, just did run start
 
 so far, only works with gcloud app deploy. it sees .env even if it's git ignored.
+https://cloud.google.com/appengine/docs/flexible/nodejs/roles#recommended_role_for_application_deployment
+for some reason dont have permission to deploy with code build.
