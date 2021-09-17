@@ -1,6 +1,12 @@
 steps:
+  - name: "gcr.io/cloud-builders/git"
+    args: ["checkout forever"]
+
   - name: "gcr.io/cloud-builders/npm"
     args: ["install"]
+
+  - name: "gcr.io/cloud-builders/npm"
+    args: ["install", "forever", "-g"]
 
   - name: "gcr.io/cloud-builders/npm"
     args: ["run", "start"]

@@ -5,9 +5,9 @@ had to use google cloud sdk shell instead of vs code prompt
 had to add txt verification file to aws blogs.anhonestobserver.com to register domain
 had to copy name servers from app engine to where i bought the domain name (aws)
 ssl in aws
-for ci/cd, use cloud build to auto deploy from github. https://www.youtube.com/watch?v=Zd014DjonqE&t=498s
+
+for ci/cd, use cloud build to auto deploy from github. https://www.youtube.com/watch?v=Zd014DjonqE&t=498s !!! not working yet
 except in the cloudbuild.yaml, for the deploy
 step, just did run start
-for environment variables, i think i just manually went in cloud shell
-and added .env file for first time. i think it stays there even
-if there's an auto deploy from github.
+
+so far, only works with gcloud app deploy. it sees .env even if it's git ignored.
