@@ -6,7 +6,7 @@ steps:
     entrypoint: npm
     args: ["run", "create-env"]
     env:
-      - "MY_SECRET_KEY=${_DB_PW}"
+      - "DB_PW=${_DB_PW}"
   - name: "gcr.io/cloud-builders/gcloud"
     args: ["app", "deploy"]
 timeout: "1600s"
