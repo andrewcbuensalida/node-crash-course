@@ -1,6 +1,6 @@
 steps:
   - name: "gcr.io/cloud-builders/git"
-    args: ["checkout forever"]
+    args: ["git checkout forever"]
 
   - name: "gcr.io/cloud-builders/npm"
     args: ["install"]
