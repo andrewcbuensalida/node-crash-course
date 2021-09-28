@@ -115,3 +115,7 @@ textarea {
 	font-size: 1.4em;
 	cursor: pointer;
 }
+
+#limit {
+	color: red;
+}

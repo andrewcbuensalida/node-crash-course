@@ -27,3 +27,5 @@ i guess it deploys whatever the head is, guessing based on the build log
   OR they say To build your source on a Git repo, Cloud Build performs a shallow clone of the repo. This means that only the single commit that started the build is checked out in the workspace to build. Cloud Build does not check out any other branches or history. This is done for efficiency, so that builds don't have to wait to fetch the whole repository and history just to build a single commit.
 
 app.yaml very particular too, needs nodejs14
+
+express rate limit sucks. i set it to 1 max request per 20 seconds, it allows 2.
