@@ -119,3 +119,9 @@ textarea {
 #limit {
 	color: red;
 }
+
+p > a {
+	color: rgb(167, 167, 42);
+	font-weight: bolder;
+	font-size: 1.1rem;
+}
