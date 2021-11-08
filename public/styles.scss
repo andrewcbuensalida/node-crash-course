@@ -1,0 +1,88 @@
+// //  use mixins, code that can be reused like a function
+// @mixin theme($theme: DarkGray) {
+// 	background: $theme;
+// 	box-shadow: 0 0 1px rgba($theme, 0.25);
+// 	color: #fff;
+// }
+// .info {
+// 	@include theme;
+// }
+// .alert {
+// 	@include theme($theme: DarkRed);
+// }
+// // is like this in css
+// .info {
+// 	background: DarkGray;
+// 	box-shadow: 0 0 1px rgba(169, 169, 169, 0.25);
+// 	color: #fff;
+// }
+// .alert {
+// 	background: DarkRed;
+// 	box-shadow: 0 0 1px rgba(139, 0, 0, 0.25);
+// 	color: #fff;
+// }
+
+// //  modules are scss that can be imported. name it like _moduleName, then can import it with
+// @use "moduleName";
+// // then use it with moduleName.$variable  / _base.scss  $font-stack: Helvetica, sans-serif;
+
+// $primary-color: #333;
+
+// body {
+// 	font: 100% $font-stack;
+// 	color: $primary-color;
+// }
+
+// // styles.scss
+// @use "base";
+// .inverse {
+// 	background-color: base.$primary-color;
+// 	color: white;
+// }
+// //  partials are files that you want to inlude in another file. it should start with _
+// // _reset.scss
+// html,
+// body,
+// ul,
+// ol {
+// 	margin: 0;
+// 	padding: 0;
+// }
+// // styles.css
+// @import "reset";
+
+// body {
+// 	font-family: Helvetica, sans-serif;
+// 	font-size: 18px;
+// 	color: red;
+// }
+// //  this will add reset before the body variables just has a $ in front of it  custom functions
+// @function function-name($var1, $var2) {
+// 	@return percentage($var1/$var2);
+// }
+// //  then to use it
+// .col-3 {
+// 	width: column-width(3, 8);
+// }
+// //  difference of functions and mixins, functions return a value, mixins return code snippet
+// //  @extend basically is used when have multiple styles that are similar but have some minor differences.
+// .button-basic {
+// 	border: none;
+// 	padding: 15px 30px;
+// 	text-align: center;
+// 	font-size: 16px;
+// 	cursor: pointer;
+// }
+// .button-report {
+// 	@extend .button-basic;
+// 	background-color: red;
+// }
+// //  nested, the & means the parent
+// p {
+// 	&:hover {
+// 		text-decoration: underline;
+// 	}
+// 	a {
+// 		color: green;
+// 	}
+// }
