@@ -86,3 +86,66 @@
 // 		color: green;
 // 	}
 // }
+
+// @font-face {
+// 	font-family: title;
+// 	src: url(obesum-ultra-caps.extra-black-expanded.ttf);
+// }
+// body {
+// 	justify-content: center;
+// 	nav {
+// 		div {
+// 			//title
+// 			margin: 0 auto;
+// 			height: 100vh;
+// 			color: green;
+// 			font-family: title;
+// 			font-size: 10rem;
+// 			div {
+// 				height: 90vh;
+// 				width: 90vw;
+// 				&:nth-child(1) {
+// 					margin: 0 auto;
+// 				}
+// 				&:nth-child(2) {
+// 					justify-content: center;
+// 					text-align: center;
+// 					margin: 0 auto;
+// 				}
+// 			}
+// 		}
+// 		color: blue;
+// 	}
+// }
+
+@font-face {
+	font-family: Biko;
+	src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/biko-black.woff");
+}
+body {
+	// background: linear-gradient(orange, yellow);
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	#mask {
+		font-family: Biko, sans-serif;
+		background-color: white;
+		width: 100%;
+		min-height: 100vh;
+		color: black;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		font-size: 150px;
+		mix-blend-mode: screen;
+		h1 {
+			line-height: 80%;
+			margin: 0;
+		}
+	}
+	header video {
+		height: 100vh;
+		position: fixed;
+	}
+}
