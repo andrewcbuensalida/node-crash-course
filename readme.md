@@ -20,12 +20,22 @@ for setting env variables, https://medium.com/@brian.young.pro/how-to-add-enviro
 working! the only problem is no forever. and how does it know which branch to deploy?
 i guess it deploys whatever the head is, guessing based on the build log
 
-- branch adc60d8edb1439a5a56723d7c1996b157ef9beb8 -> FETCH_HEAD
-  HEAD is now at adc60d8 corrected DB_PW
-  BUILD
+-   branch adc60d8edb1439a5a56723d7c1996b157ef9beb8 -> FETCH_HEAD
+    HEAD is now at adc60d8 corrected DB_PW
+    BUILD
 
-  OR they say To build your source on a Git repo, Cloud Build performs a shallow clone of the repo. This means that only the single commit that started the build is checked out in the workspace to build. Cloud Build does not check out any other branches or history. This is done for efficiency, so that builds don't have to wait to fetch the whole repository and history just to build a single commit.
+    OR they say To build your source on a Git repo, Cloud Build performs a shallow clone of the repo. This means that only the single commit that started the build is checked out in the workspace to build. Cloud Build does not check out any other branches or history. This is done for efficiency, so that builds don't have to wait to fetch the whole repository and history just to build a single commit.
 
 app.yaml very particular too, needs nodejs14
 
 express rate limit sucks. i set it to 1 max request per 20 seconds, it allows 2.
+
+now trying scss:
+display: inline-block; is when you want an inline element (an element that's position is not influenced by
+padding and border) to adjust when the padding and border is too large. so it acts as an inline, meaning they
+fit side by side, but their padding and border is included in the fitting.
+images and iframes behave like inline-block elements.
+block elements, even if they could fit side by side, are stacked on top of each other.
+inline elements fit side by side horizontally. their padding doesnt influence their position. cant give them a
+height or margin, but can change their size.
+they say dont use float: right or left. for layouting. use it to wrap text around it. for layouting, use inline-block instead or display:flex.
