@@ -10,6 +10,14 @@
           box-sizing: border-box;
   text-decoration: none;
   color: black;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+* ::-webkit-scrollbar {
+  display: none;
 }
 
 body {
@@ -174,8 +182,6 @@ body .blogs .blog a .titleSnip {
   padding: 3%;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.2);
-  -webkit-transition: background 0.4s ease-in-out;
-  transition: background 0.4s ease-in-out;
   overflow: hidden;
 }
 
@@ -189,10 +195,10 @@ body .blogs .blog a .titleSnip:before {
   left: 0;
   top: 0;
   opacity: 0.5;
-  -webkit-filter: blur(30px);
-          filter: blur(30px);
-  -webkit-transform: translateX(-100px) skewX(-15deg);
-          transform: translateX(-100px) skewX(-15deg);
+  -webkit-filter: blur(50px);
+          filter: blur(50px);
+  -webkit-transform: translateX(-150px) skewX(-15deg);
+          transform: translateX(-150px) skewX(-15deg);
 }
 
 body .blogs .blog a .titleSnip:after {
@@ -219,16 +225,16 @@ body .blogs .blog a .titleSnip:hover:before {
   -webkit-transform: translateX(120vw) skewX(-15deg);
           transform: translateX(120vw) skewX(-15deg);
   opacity: 0.6;
-  -webkit-transition: 1.2s;
-  transition: 1.2s;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 body .blogs .blog a .titleSnip:hover:after {
   -webkit-transform: translateX(120vw) skewX(-15deg);
           transform: translateX(120vw) skewX(-15deg);
   opacity: 1;
-  -webkit-transition: 1.2s;
-  transition: 1.2s;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 body .blogs .blog a .titleSnip * {

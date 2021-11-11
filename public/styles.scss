@@ -128,6 +128,11 @@
 	box-sizing: border-box;
 	text-decoration: none;
 	color: black;
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+	::-webkit-scrollbar {
+		display: none;
+	}
 }
 body {
 	width: 100vw;
@@ -245,7 +250,6 @@ body {
 					padding: 3%;
 					text-align: center;
 					background-color: rgba(0, 0, 0, 0.2);
-					transition: background 0.4s ease-in-out;
 					overflow: hidden;
 					&:before {
 						content: "";
@@ -257,8 +261,8 @@ body {
 						left: 0;
 						top: 0;
 						opacity: 0.5;
-						filter: blur(30px);
-						transform: translateX(-100px) skewX(-15deg);
+						filter: blur(50px);
+						transform: translateX(-150px) skewX(-15deg);
 					}
 					&:after {
 						content: "";
@@ -278,12 +282,12 @@ body {
 						&:before {
 							transform: translateX(120vw) skewX(-15deg);
 							opacity: 0.6;
-							transition: 1.2s;
+							transition: 1s;
 						}
 						&:after {
 							transform: translateX(120vw) skewX(-15deg);
 							opacity: 1;
-							transition: 1.2s;
+							transition: 1s;
 						}
 					}
 					* {
