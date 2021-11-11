@@ -14,35 +14,12 @@
 							<p class="snippet"><%= blog.snippet.length < 300 ? blog.snippet : blog.snippet.substr(0,300)+'...read more'  %></p>
 						</div>
 					</a>
-<button onclick="handleClick()">click me</button>
-						
 				</div>
 			<% }) %> <% } else { %>
 			<p>There are no blogs to display...</p>
 			<% } %>
 		</div>
-
-
 		<%- include("./partials/footer.ejs") %>
 
-		<script>
-			let pageYOffset = 0;
-			// window.addEventListener('scroll',e=>{
-			// 	console.log(window.pageYOffset)
-				
-			// 	if(window.pageYOffset>pageYOffset){
-			// 		console.log(`scrolling down`)
-			// 		pageYOffset+=window.innerHeight
-			// 		window.pageYOffset=pageYOffset
-			// 	}
-				
-			// })
-			function handleClick(){
-				console.log(`hello`)
-				window.scrollTo(500,600);
-				
-			}
-
-		</script>
 	</body>
 </html>

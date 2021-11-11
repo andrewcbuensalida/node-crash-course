@@ -3,6 +3,76 @@
   src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/biko-black.woff");
 }
 
+@-webkit-keyframes white2black {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background-color: black;
+  }
+}
+
+@keyframes white2black {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background-color: black;
+  }
+}
+
+@-webkit-keyframes black2white {
+  0% {
+    background-color: black;
+  }
+  100% {
+    background-color: white;
+  }
+}
+
+@keyframes black2white {
+  0% {
+    background-color: black;
+  }
+  100% {
+    background-color: white;
+  }
+}
+
+@-webkit-keyframes opacityToZero {
+  from {
+    -webkit-filter: opacity(1);
+            filter: opacity(1);
+  }
+  to {
+    -webkit-filter: opacity(0);
+            filter: opacity(0);
+  }
+}
+
+@keyframes opacityToZero {
+  from {
+    -webkit-filter: opacity(1);
+            filter: opacity(1);
+  }
+  to {
+    -webkit-filter: opacity(0);
+            filter: opacity(0);
+  }
+}
+
+@-webkit-keyframes zIndex2-1 {
+  to {
+    z-index: -1;
+  }
+}
+
+@keyframes zIndex2-1 {
+  to {
+    z-index: -1;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -24,23 +94,64 @@ body {
   width: 100vw;
 }
 
-body header {
+body .splash {
+  -webkit-animation-name: zIndex2-1;
+          animation-name: zIndex2-1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 17s;
+          animation-delay: 17s;
+  -webkit-animation-duration: 0s;
+          animation-duration: 0s;
+  height: 100vh;
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+		supported by Chrome,
+		Edge,
+		Opera and Firefox */
 }
 
-body header video {
+body .splash video {
   height: 100vh;
   position: fixed;
-  z-index: -1;
+  z-index: 2;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 13s;
+          animation-delay: 13s;
+  -webkit-animation-name: opacityToZero;
+          animation-name: opacityToZero;
+  -webkit-animation-duration: 0s;
+          animation-duration: 0s;
 }
 
-body header #mask {
+body .splash #mask {
+  z-index: 3;
   background-color: white;
+  -webkit-animation-name: opacityToZero;
+          animation-name: opacityToZero;
+  -webkit-animation-delay: 13s;
+          animation-delay: 13s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: 0s;
+          animation-duration: 0s;
   height: 100vh;
   width: 100vw;
   color: black;
@@ -61,7 +172,7 @@ body header #mask {
   mix-blend-mode: screen;
 }
 
-body header #mask h1 {
+body .splash #mask h1 {
   font-family: Biko, sans-serif;
   line-height: 80%;
   margin: 0;
@@ -69,8 +180,27 @@ body header #mask h1 {
   transition: 0.3s ease;
 }
 
-body header #mask h1:hover {
+body .splash #mask h1:hover {
   color: #535353;
+}
+
+body .splash .white {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 4;
+  background-color: white;
+  mix-blend-mode: screen;
+  -webkit-animation-name: white2black, black2white, opacityToZero;
+          animation-name: white2black, black2white, opacityToZero;
+  -webkit-animation-duration: 4s, 4s, 4s;
+          animation-duration: 4s, 4s, 4s;
+  -webkit-animation-delay: 2s, 9s, 13s;
+          animation-delay: 2s, 9s, 13s;
+  -webkit-animation-fill-mode: forwards, forwards;
+          animation-fill-mode: forwards, forwards;
 }
 
 body #navBar {
@@ -94,7 +224,7 @@ body #navBar ul {
 }
 
 body #navBar ul a li {
-  color: #758583;
+  color: #9eacaa;
   text-align: center;
   padding: 5px;
   width: 200px;
@@ -139,7 +269,7 @@ body #navBar ul a li:after {
 }
 
 body #navBar ul a li:hover {
-  background: #213533;
+  background: #385a3e;
   cursor: pointer;
 }
 
@@ -160,14 +290,24 @@ body #navBar ul a li:hover:after {
 }
 
 body .blogs {
-  background: white;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
 }
 
 body .blogs .blog {
+  scroll-snap-align: start;
+  background: black;
   position: relative;
+  height: 100vh;
 }
 
 body .blogs .blog video {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
   width: 100vw;
   -webkit-filter: brightness(80%);
           filter: brightness(80%);

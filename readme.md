@@ -31,6 +31,7 @@ app.yaml very particular too, needs nodejs14
 express rate limit sucks. i set it to 1 max request per 20 seconds, it allows 2.
 
 now trying scss:
+stacking context is the order of elements in the z-index. the stacking order of the children of a parent is group into that parent's stacking order. so its possible for an element a with z-index 1 be underneath an element b with z-index -1 if element a's parent is underneath element b.
 display: inline-block; is when you want an inline element (an element that's position is not influenced by
 padding and border) to adjust when the padding and border is too large. so it acts as an inline, meaning they
 fit side by side, but their padding and border is included in the fitting.

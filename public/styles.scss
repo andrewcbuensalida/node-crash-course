@@ -122,6 +122,35 @@
 	font-family: Biko;
 	src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/biko-black.woff");
 }
+@keyframes white2black {
+	0% {
+		background-color: white;
+	}
+	100% {
+		background-color: black;
+	}
+}
+@keyframes black2white {
+	0% {
+		background-color: black;
+	}
+	100% {
+		background-color: white;
+	}
+}
+@keyframes opacityToZero {
+	from {
+		filter: opacity(1);
+	}
+	to {
+		filter: opacity(0);
+	}
+}
+@keyframes zIndex2-1 {
+	to {
+		z-index: -1;
+	}
+}
 * {
 	margin: 0;
 	padding: 0;
@@ -136,16 +165,40 @@
 }
 body {
 	width: 100vw;
-	header {
+	.splash {
+		animation-name: zIndex2-1;
+		animation-fill-mode: forwards;
+		animation-delay: 17s;
+		animation-duration: 0s;
+		height: 100vh;
+		position: absolute;
 		display: flex;
 		justify-content: center;
+		-webkit-touch-callout: none; /* iOS Safari */
+		-webkit-user-select: none; /* Safari */
+		-khtml-user-select: none; /* Konqueror HTML */
+		-moz-user-select: none; /* Old versions of Firefox */
+		-ms-user-select: none; /* Internet Explorer/Edge */
+		user-select: none; /* Non-prefixed version, currently
+		supported by Chrome,
+		Edge,
+		Opera and Firefox */
 		video {
 			height: 100vh;
 			position: fixed;
-			z-index: -1;
+			z-index: 2;
+			animation-fill-mode: forwards;
+			animation-delay: 13s;
+			animation-name: opacityToZero;
+			animation-duration: 0s;
 		}
 		#mask {
+			z-index: 3;
 			background-color: rgb(255, 255, 255);
+			animation-name: opacityToZero;
+			animation-delay: 13s;
+			animation-fill-mode: forwards;
+			animation-duration: 0s;
 			height: 100vh;
 			width: 100vw;
 			color: black;
@@ -165,6 +218,20 @@ body {
 				}
 			}
 		}
+		.white {
+			position: fixed;
+			top: 0;
+			left: 0;
+			height: 100vh;
+			width: 100vw;
+			z-index: 4;
+			background-color: white;
+			mix-blend-mode: screen;
+			animation-name: white2black, black2white, opacityToZero;
+			animation-duration: 4s, 4s, 4s;
+			animation-delay: 2s, 9s, 13s;
+			animation-fill-mode: forwards, forwards;
+		}
 	}
 	#navBar {
 		position: sticky;
@@ -179,7 +246,7 @@ body {
 			display: flex;
 			a {
 				li {
-					color: rgb(117, 133, 131);
+					color: rgb(158, 172, 170);
 					text-align: center;
 					padding: 5px;
 					width: 200px;
@@ -215,7 +282,7 @@ body {
 						transform: translateX(-100px) skewX(-15deg);
 					}
 					&:hover {
-						background: #213533;
+						background: #385a3e;
 						cursor: pointer;
 						&:before {
 							transform: translateX(300px) skewX(-15deg);
@@ -233,10 +300,18 @@ body {
 		}
 	}
 	.blogs {
-		background: rgb(255, 255, 255);
+		scroll-snap-type: y mandatory;
+		overflow-y: scroll;
+		height: 100vh;
 		.blog {
+			scroll-snap-align: start;
+			background: rgb(0, 0, 0);
 			position: relative;
+			height: 100vh;
 			video {
+				position: relative;
+				top: 50%;
+				transform: translate(0, -50%);
 				width: 100vw;
 				filter: brightness(80%);
 			}
