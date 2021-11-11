@@ -35,8 +35,7 @@ const blog_create_post = (req, res) => {
 		});
 	}
 	const blog = new Blog(req.body);
-	blog
-		.save()
+	blog.save()
 		.then((result) => {
 			res.redirect("/blogs");
 		})

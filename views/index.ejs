@@ -6,12 +6,12 @@
 			<% if (blogs.length > 0) { %> <% blogs.forEach(blog => { %>
 				<div class='blog'>
 					<video autoplay playsinline muted loop preload poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/oceanshot.jpg">
-						<source src="https://s3.us-west-1.amazonaws.com/blogs.anhonestobserver.com/142073_playlist.mp4" />
+						<source src="<%= blog.videoURL %>" />
 					</video>
 					<a href="/blogs/<%= blog._id %>">
 						<div class='titleSnip'>
 							<h3 class="title"><%= blog.title %></h3>
-							<p class="snippet"><%= blog.snippet %></p>
+							<p class="snippet"><%= blog.snippet.length < 300 ? blog.snippet : blog.snippet.substr(0,300)+'...read more'  %></p>
 						</div>
 					</a>
 
@@ -23,5 +23,6 @@
 		</div>
 
 		<%- include("./partials/footer.ejs") %>
+
 	</body>
 </html>

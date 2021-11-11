@@ -41,3 +41,4 @@ height or margin, but can change their size.
 they say dont use float: right or left. for layouting. use it to wrap text around it. for layouting, use inline-block instead or display:flex.
 you.keepvid.tube to download videos from artgrid.io, then upload to amazon s3 for hosting.
 make the bucket public and the file public, then copy the object url. then make a video element with sourrce pointing to it.
+dont need to download or upload to s3, could get it from pexels. right click on video, view frame source, then find the mp4.
