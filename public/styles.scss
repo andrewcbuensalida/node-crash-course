@@ -162,8 +162,11 @@ body {
 		}
 	}
 	#navBar {
-		background: rgb(255, 255, 255);
-		font-size: 40px;
+		position: sticky;
+		top: 0px;
+		z-index: 1;
+		background: rgb(34, 36, 34);
+		font-size: 30px;
 		font-family: "Century Gothic", "Lato", sans-serif;
 		ul {
 			margin: 0;
@@ -171,13 +174,13 @@ body {
 			display: flex;
 			a {
 				li {
-					color: rgb(56, 66, 65);
+					color: rgb(117, 133, 131);
 					text-align: center;
 					padding: 5px;
 					width: 200px;
 					list-style-type: none;
-					position: relative;
 					border-radius: 5px;
+					position: relative;
 					transition: background 0.2s ease-in-out;
 					overflow: hidden;
 					&:before {
@@ -207,7 +210,7 @@ body {
 						transform: translateX(-100px) skewX(-15deg);
 					}
 					&:hover {
-						background: #5a8f8a;
+						background: #213533;
 						cursor: pointer;
 						&:before {
 							transform: translateX(300px) skewX(-15deg);
@@ -242,11 +245,53 @@ body {
 					padding: 3%;
 					text-align: center;
 					background-color: rgba(0, 0, 0, 0.2);
+					transition: background 0.4s ease-in-out;
+					overflow: hidden;
+					&:before {
+						content: "";
+						display: block;
+						position: absolute;
+						background: rgba(255, 255, 255, 0.5);
+						width: 60px;
+						height: 100%;
+						left: 0;
+						top: 0;
+						opacity: 0.5;
+						filter: blur(30px);
+						transform: translateX(-100px) skewX(-15deg);
+					}
+					&:after {
+						content: "";
+						display: block;
+						position: absolute;
+						background: rgba(255, 255, 255, 0.2);
+						width: 30px;
+						height: 100%;
+						left: 30px;
+						top: 0;
+						opacity: 0;
+						filter: blur(5px);
+						transform: translateX(-100px) skewX(-15deg);
+					}
+					&:hover {
+						cursor: pointer;
+						&:before {
+							transform: translateX(120vw) skewX(-15deg);
+							opacity: 0.6;
+							transition: 1.2s;
+						}
+						&:after {
+							transform: translateX(120vw) skewX(-15deg);
+							opacity: 1;
+							transition: 1.2s;
+						}
+					}
 					* {
+						margin: 5px;
 						font-family: "Century Gothic", "Lato", sans-serif;
 						font-size: 24px;
 						color: white;
-						opacity: 0.9;
+						text-shadow: 0px 6px 6px rgb(0, 0, 0);
 					}
 				}
 			}

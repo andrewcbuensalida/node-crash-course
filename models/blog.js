@@ -17,7 +17,7 @@ const blogSchema = new Schema(
 		},
 		videoURL: {
 			type: String,
-			required: true,
+			required: false,
 		},
 	},
 	{ timestamps: true }

@@ -39,6 +39,29 @@ block elements, even if they could fit side by side, are stacked on top of each 
 inline elements fit side by side horizontally. their padding doesnt influence their position. cant give them a
 height or margin, but can change their size.
 they say dont use float: right or left. for layouting. use it to wrap text around it. for layouting, use inline-block instead or display:flex.
+
+to center a div, many ways:
+
+1. display:flex the parent, also align-items:center, justify-content:center.
+2. child has display:relative, left:50%, top:50%, transform: translate(-50%,-50%)
+3. or grid, parent gets
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: 1fr 1fr 1fr;
+   child has
+   .child {
+   grid-column-start: 2;
+   grid-row-start: 2;
+   }
+4. or display:grid or flex, then child has margin:auto
+
+to center text in a div:
+
+1. just wrap the text in a div, so itll be text in a div in a div, then display:flex on the parent.....
+2. or parent is display:table, child div has display:table-cell, and vertical-align:middle.
+
 you.keepvid.tube to download videos from artgrid.io, then upload to amazon s3 for hosting.
 make the bucket public and the file public, then copy the object url. then make a video element with sourrce pointing to it.
 dont need to download or upload to s3, could get it from pexels. right click on video, view frame source, then find the mp4.
+
+where to get website design inspirations: wix, wordpress, codepen.
