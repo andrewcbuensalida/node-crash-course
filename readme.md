@@ -39,3 +39,5 @@ block elements, even if they could fit side by side, are stacked on top of each 
 inline elements fit side by side horizontally. their padding doesnt influence their position. cant give them a
 height or margin, but can change their size.
 they say dont use float: right or left. for layouting. use it to wrap text around it. for layouting, use inline-block instead or display:flex.
+you.keepvid.tube to download videos from artgrid.io, then upload to amazon s3 for hosting.
+make the bucket public and the file public, then copy the object url. then make a video element with sourrce pointing to it.
