@@ -574,7 +574,6 @@ body {
 	}
 
 	.details {
-		box-sizing: border-box;
 		background-color: rgb(54, 54, 54);
 		font-size: 1.5em;
 		top: 30px;
@@ -584,6 +583,7 @@ body {
 			width: 100%;
 		}
 		.content {
+			padding: 30px;
 			& * {
 				margin: 30px;
 				color: honeydew;
@@ -592,11 +592,37 @@ body {
 				text-indent: 50px;
 				font-family: Cambria;
 			}
+			.deleteDiv {
+				display: flex;
+				justify-content: center;
+				i {
+					cursor: pointer;
+					font-size: 1.5em;
+				}
+			}
 		}
 	}
 	footer {
 		background-color: rgb(32, 32, 32);
 		color: white;
 		text-align: center;
+		position: relative;
+	}
+}
+
+.create-blog {
+	width: 100%;
+	height: 100%;
+	background-color: violet;
+	form {
+		position: relative;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 300px;
+		height: 400px;
+		* {
+			margin: 20px;
+		}
 	}
 }

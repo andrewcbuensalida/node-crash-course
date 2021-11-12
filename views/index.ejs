@@ -2,46 +2,44 @@
 	<%- include("./partials/head.ejs") %>
 	<body>
 		<div class="all">
-		<%- include("./partials/splash.ejs") %>
-		<%- include("./partials/nav.ejs") %>
-		<div class="blogs">
-			<% if (blogs.length > 0) { %> <% blogs.forEach((blog,index,array) => { %>
-				<div class='blog'>
-					<% if (index!=0){ %>
-						<div class="arrowUp">
-							<a class="arrow-up">
-								<span class="left-arm"></span>
-								<span class="right-arm"></span>
-								<span class="arrow-slide"></span>
-							</a>
-	
-						</div>
-					<% } %>
-					<video autoplay playsinline muted loop preload poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/oceanshot.jpg">
-						<source src="<%= blog.videoURL %>" />
-					</video>
-					<a href="/blogs/<%= blog._id %>">
-						<div class='titleSnip'>
-							<h3 class="title"><%= blog.title %></h3>
-							<p class="snippet"><%= blog.snippet.length < 300 ? blog.snippet : blog.snippet.substr(0,300)+'...read more'  %></p>
-						</div>
-					</a>
-					<% if (index!=array.length-1){ %>
-						<div class="arrowDown">
-							<a class="arrow-up">
-								<span class="left-arm"></span>
-								<span class="right-arm"></span>
-								<span class="arrow-slide"></span>
-							</a>
-						</div>
-					<% } %>
-				</div>
-			<% }) %> <% } else { %>
-			<p>There are no blogs to display...</p>
-			<% } %>
+			<%- include("./partials/splash.ejs") %>
+			<%- include("./partials/nav.ejs") %>
+			<div class="blogs">
+				<% if (blogs.length > 0) { %> <% blogs.forEach((blog,index,array) => { %>
+					<div class='blog'>
+						<% if (index!=0){ %>
+							<div class="arrowUp">
+								<a class="arrow-up">
+									<span class="left-arm"></span>
+									<span class="right-arm"></span>
+									<span class="arrow-slide"></span>
+								</a>
+		
+							</div>
+						<% } %>
+						<video autoplay playsinline muted loop preload poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/oceanshot.jpg">
+							<source src="<%= blog.videoURL %>" />
+						</video>
+						<a href="/blogs/<%= blog._id %>">
+							<div class='titleSnip'>
+								<h3 class="title"><%= blog.title %></h3>
+								<p class="snippet"><%= blog.snippet.length < 300 ? blog.snippet : blog.snippet.substr(0,300)+'...read more'  %></p>
+							</div>
+						</a>
+						<% if (index!=array.length-1){ %>
+							<div class="arrowDown">
+								<a class="arrow-up">
+									<span class="left-arm"></span>
+									<span class="right-arm"></span>
+									<span class="arrow-slide"></span>
+								</a>
+							</div>
+						<% } %>
+					</div>
+				<% }) %> <% } else { %>
+				<p>There are no blogs to display...</p>
+				<% } %>
+			</div>
 		</div>
-
-		</div>
-
 	</body>
 </html>

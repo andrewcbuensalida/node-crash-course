@@ -11,15 +11,15 @@
 				<input type="text" id="title" name="title" required />
 				<label for="snippet">Blog snippet:</label>
 				<input type="text" id="snippet" name="snippet" required />
+				<label for="videoURL">Video URL:</label>
+				<input type="text" id="videoURL" name="videoURL" required />
 				<label for="body">Blog body:</label>
 				<textarea id="body" name="body" required></textarea>
 				<button>Submit</button>
-        <div id='limit'>
-            <%=  limit %>
-        </div>
+				<div id='limit'>
+					<%=  limit %>
+				</div>
 			</form>
 		</div>
-
-		<%- include("./partials/footer.ejs") %>
 	</body>
 </html>
