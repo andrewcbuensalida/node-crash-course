@@ -1,6 +1,7 @@
 <html lang="en">
 	<%- include("./partials/head.ejs") %>
 	<body>
+		<div class="all">
 		<%- include("./partials/splash.ejs") %>
 		<%- include("./partials/nav.ejs") %>
 		<div class="blogs">
@@ -38,6 +39,8 @@
 			<% }) %> <% } else { %>
 			<p>There are no blogs to display...</p>
 			<% } %>
+		</div>
+
 		</div>
 
 	</body>
