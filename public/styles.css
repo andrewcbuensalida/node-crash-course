@@ -101,8 +101,8 @@ body .splash {
           animation-name: zIndex2-1;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  -webkit-animation-delay: 10s;
-          animation-delay: 10s;
+  -webkit-animation-delay: 12s;
+          animation-delay: 12s;
   -webkit-animation-duration: 0s;
           animation-duration: 0s;
   height: 100vh;
@@ -210,13 +210,13 @@ body #navBar {
   position: sticky;
   top: 0px;
   z-index: 1;
-  background: #222422;
   height: 0%;
   font-size: 30px;
   font-family: "Century Gothic", "Lato", sans-serif;
 }
 
 body #navBar ul {
+  background: #222422;
   margin: 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -227,7 +227,6 @@ body #navBar ul {
 }
 
 body #navBar ul a li {
-  text-shadow: 0px 3px 3px black;
   color: #9eacaa;
   text-align: center;
   padding: 5px;
@@ -320,13 +319,15 @@ body .blogs .blog .arrowUp {
       -ms-flex-pack: right;
           justify-content: right;
   position: relative;
+  top: 50px;
+  right: 3px;
 }
 
 body .blogs .blog .arrowUp .arrow-up {
   height: 40px;
   width: 40px;
   display: block;
-  border: 1px solid #666;
+  border: 2px solid lightgray;
   position: relative;
   cursor: pointer;
   -webkit-transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 1.5);
@@ -359,7 +360,7 @@ body .blogs .blog .arrowUp .left-arm {
 
 body .blogs .blog .arrowUp .left-arm:after {
   content: "";
-  background-color: #666;
+  background-color: lightgray;
   width: 20px;
   height: 1px;
   display: block;
@@ -386,7 +387,7 @@ body .blogs .blog .arrowUp .right-arm {
 
 body .blogs .blog .arrowUp .right-arm:after {
   content: "";
-  background-color: #666;
+  background-color: lightgray;
   width: 20px;
   height: 1px;
   display: block;
@@ -429,15 +430,15 @@ body .blogs .blog .arrowDown {
       -ms-flex-pack: right;
           justify-content: right;
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: 3px;
+  bottom: 3px;
 }
 
 body .blogs .blog .arrowDown .arrow-up {
   height: 40px;
   width: 40px;
   display: block;
-  border: 1px solid #666;
+  border: 2px solid lightgray;
   position: relative;
   cursor: pointer;
   -webkit-transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 1.5);
@@ -464,13 +465,13 @@ body .blogs .blog .arrowDown .left-arm {
   left: 3px;
   width: 20px;
   display: block;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 body .blogs .blog .arrowDown .left-arm:after {
   content: "";
-  background-color: #666;
+  background-color: lightgray;
   width: 20px;
   height: 1px;
   display: block;
@@ -490,14 +491,14 @@ body .blogs .blog .arrowDown .right-arm {
   left: 17px;
   width: 20px;
   display: block;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
   border-radius: 2px;
 }
 
 body .blogs .blog .arrowDown .right-arm:after {
   content: "";
-  background-color: #666;
+  background-color: lightgray;
   width: 20px;
   height: 1px;
   display: block;
@@ -515,13 +516,13 @@ body .blogs .blog .arrowDown .arrow-up:hover {
 }
 
 body .blogs .blog .arrowDown .arrow-up:hover .left-arm:after {
-  -webkit-transform: rotate(-10deg);
-          transform: rotate(-10deg);
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
 }
 
 body .blogs .blog .arrowDown .arrow-up:hover .right-arm:after {
-  -webkit-transform: rotate(10deg);
-          transform: rotate(10deg);
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
 }
 
 body .blogs .blog .arrowDown .arrow-up:hover .arrow-slide {
@@ -533,12 +534,13 @@ body .blogs .blog .arrowDown .arrow-up:hover .arrow-slide {
 
 body .blogs .blog video {
   position: absolute;
-  top: 48%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-  width: 100vw;
-  -webkit-filter: brightness(80%);
-          filter: brightness(80%);
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  height: 100vh;
+  -webkit-filter: brightness(70%);
+          filter: brightness(70%);
 }
 
 body .blogs .blog a .titleSnip {

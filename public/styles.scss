@@ -117,7 +117,7 @@
 // 		color: blue;
 // 	}
 // }
-
+$arrowColor: rgb(211, 211, 211);
 @font-face {
 	font-family: Biko;
 	src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/biko-black.woff");
@@ -151,6 +151,7 @@
 		z-index: -1;
 	}
 }
+
 * {
 	margin: 0;
 	padding: 0;
@@ -170,7 +171,7 @@ body {
 	.splash {
 		animation-name: zIndex2-1;
 		animation-fill-mode: forwards;
-		animation-delay: 10s;
+		animation-delay: 12s;
 		animation-duration: 0s;
 		height: 100vh;
 		position: absolute;
@@ -239,17 +240,16 @@ body {
 		position: sticky;
 		top: 0px;
 		z-index: 1;
-		background: rgb(34, 36, 34);
 		height: 0%;
 		font-size: 30px;
 		font-family: "Century Gothic", "Lato", sans-serif;
 		ul {
+			background: rgb(34, 36, 34);
 			margin: 0;
 			justify-content: center;
 			display: flex;
 			a {
 				li {
-					text-shadow: 0px 3px 3px rgb(0, 0, 0);
 					color: rgb(158, 172, 170);
 					text-align: center;
 					padding: 5px;
@@ -316,11 +316,13 @@ body {
 				display: flex;
 				justify-content: right;
 				position: relative;
+				top: 50px;
+				right: 3px;
 				.arrow-up {
 					height: 40px;
 					width: 40px;
 					display: block;
-					border: 1px solid #666;
+					border: 2px solid $arrowColor;
 					position: relative;
 					cursor: pointer;
 					transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 1.5);
@@ -349,7 +351,7 @@ body {
 					transform: rotate(-45deg);
 					&:after {
 						content: "";
-						background-color: #666;
+						background-color: $arrowColor;
 						width: 20px;
 						height: 1px;
 						display: block;
@@ -372,7 +374,7 @@ body {
 					border-radius: 2px;
 					&:after {
 						content: "";
-						background-color: #666;
+						background-color: $arrowColor;
 						width: 20px;
 						height: 1px;
 						display: block;
@@ -402,13 +404,13 @@ body {
 				display: flex;
 				justify-content: right;
 				position: absolute;
-				right: 0;
-				bottom: 0;
+				right: 3px;
+				bottom: 3px;
 				.arrow-up {
 					height: 40px;
 					width: 40px;
 					display: block;
-					border: 1px solid #666;
+					border: 2px solid $arrowColor;
 					position: relative;
 					cursor: pointer;
 					transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 1.5);
@@ -434,10 +436,10 @@ body {
 					left: 3px;
 					width: 20px;
 					display: block;
-					transform: rotate(-45deg);
+					transform: rotate(45deg);
 					&:after {
 						content: "";
-						background-color: #666;
+						background-color: $arrowColor;
 						width: 20px;
 						height: 1px;
 						display: block;
@@ -456,11 +458,11 @@ body {
 					left: 17px;
 					width: 20px;
 					display: block;
-					transform: rotate(45deg);
+					transform: rotate(-45deg);
 					border-radius: 2px;
 					&:after {
 						content: "";
-						background-color: #666;
+						background-color: $arrowColor;
 						width: 20px;
 						height: 1px;
 						display: block;
@@ -474,10 +476,10 @@ body {
 				.arrow-up:hover {
 					transition: all 0.1s;
 					.left-arm:after {
-						transform: rotate(-10deg);
+						transform: rotate(10deg);
 					}
 					.right-arm:after {
-						transform: rotate(10deg);
+						transform: rotate(-10deg);
 					}
 					.arrow-slide {
 						transition: all 0.4s ease-in-out;
@@ -494,10 +496,11 @@ body {
 			height: 100vh;
 			video {
 				position: absolute;
-				top: 48%;
-				transform: translate(0, -50%);
-				width: 100vw;
-				filter: brightness(80%);
+				top: 50%;
+				transform: translate(-50%, -50%);
+				left: 50%;
+				height: 100vh;
+				filter: brightness(70%);
 			}
 			a {
 				.titleSnip {
