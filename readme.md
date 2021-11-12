@@ -66,3 +66,7 @@ make the bucket public and the file public, then copy the object url. then make 
 dont need to download or upload to s3, could get it from pexels. right click on video, view frame source, then find the mp4.
 
 where to get website design inspirations: wix, wordpress, codepen.
+
+todo:
+paragraph line breaks
+about page

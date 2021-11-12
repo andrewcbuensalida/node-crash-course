@@ -778,4 +778,10 @@ body footer {
   -webkit-transition: 0.7s;
   transition: 0.7s;
 }
+
+.create-blog footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
 /*# sourceMappingURL=styles.css.map */
