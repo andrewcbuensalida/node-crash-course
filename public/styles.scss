@@ -158,16 +158,17 @@ $arrowColor: rgb(211, 211, 211);
 	box-sizing: border-box;
 	text-decoration: none;
 	color: black;
+}
+body {
 	-ms-overflow-style: none; /* IE and Edge */
 	scrollbar-width: none; /* Firefox */
 	::-webkit-scrollbar {
 		display: none;
 	}
-}
-body {
+	overflow-x: hidden;
 	width: 100vw;
 	height: 100vh;
-	overflow: hidden;
+	// overflow: hidden;
 	.splash {
 		animation-name: zIndex2-1;
 		animation-fill-mode: forwards;
@@ -559,6 +560,34 @@ body {
 						color: white;
 						text-shadow: 0px 6px 6px rgb(0, 0, 0);
 					}
+				}
+			}
+		}
+	}
+	.details {
+		background-color: rgb(54, 54, 54);
+		overflow: scroll;
+		font-size: 1.5em;
+		position: relative;
+		top: 30px;
+		width: 100vw;
+
+		video {
+			width: 100vw;
+		}
+		.content {
+			& * {
+				margin: 30px;
+				color: honeydew;
+			}
+			p {
+				text-indent: 50px;
+				font-family: Cambria, Cochin, Georgia, Times, "Times New Roman",
+					serif;
+			}
+			.delete {
+				i {
+					height: 100px;
 				}
 			}
 		}

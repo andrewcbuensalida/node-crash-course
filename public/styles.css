@@ -80,20 +80,20 @@
           box-sizing: border-box;
   text-decoration: none;
   color: black;
+}
+
+body {
   -ms-overflow-style: none;
   /* IE and Edge */
   scrollbar-width: none;
   /* Firefox */
-}
-
-* ::-webkit-scrollbar {
-  display: none;
-}
-
-body {
+  overflow-x: hidden;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
+}
+
+body ::-webkit-scrollbar {
+  display: none;
 }
 
 body .splash {
@@ -613,5 +613,32 @@ body .blogs .blog a .titleSnip * {
   font-size: 24px;
   color: white;
   text-shadow: 0px 6px 6px black;
+}
+
+body .details {
+  background-color: #363636;
+  overflow: scroll;
+  font-size: 1.5em;
+  position: relative;
+  top: 30px;
+  width: 100vw;
+}
+
+body .details video {
+  width: 100vw;
+}
+
+body .details .content * {
+  margin: 30px;
+  color: honeydew;
+}
+
+body .details .content p {
+  text-indent: 50px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+body .details .content .delete i {
+  height: 100px;
 }
 /*# sourceMappingURL=styles.css.map */
