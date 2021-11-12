@@ -672,7 +672,8 @@ body footer {
 }
 
 .create-blog form {
-  color: aliceblue;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #c0c2c4;
   position: relative;
   top: 50%;
   left: 50%;
@@ -688,21 +689,93 @@ body footer {
   margin: 5px;
 }
 
+.create-blog form div {
+  text-align: center;
+  margin: 0;
+  color: #b8b9b9;
+}
+
 .create-blog form label {
-  color: aliceblue;
+  color: #cacaca;
+  font-size: 1.2em;
 }
 
 .create-blog form input {
-  height: 50px;
+  font-size: 1.2em;
+  height: 40px;
 }
 
 .create-blog form textarea {
   height: 150px;
+  font-size: 1.2em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .create-blog form button {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
   background-color: #12725a;
   height: 40px;
+  width: 150px;
   cursor: pointer;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.3em;
+  overflow: hidden;
+}
+
+.create-blog form button:before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  width: 60px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0.5;
+  -webkit-filter: blur(30px);
+          filter: blur(30px);
+  -webkit-transform: translateX(-100px) skewX(-15deg);
+          transform: translateX(-100px) skewX(-15deg);
+}
+
+.create-blog form button:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  width: 30px;
+  height: 100%;
+  left: 30px;
+  top: 0;
+  opacity: 0;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  -webkit-transform: translateX(-100px) skewX(-15deg);
+          transform: translateX(-100px) skewX(-15deg);
+}
+
+.create-blog form button:hover {
+  text-shadow: none;
+  background: #1d7c64;
+  cursor: pointer;
+}
+
+.create-blog form button:hover:before {
+  -webkit-transform: translateX(300px) skewX(-15deg);
+          transform: translateX(300px) skewX(-15deg);
+  opacity: 0.6;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.create-blog form button:hover:after {
+  -webkit-transform: translateX(300px) skewX(-15deg);
+          transform: translateX(300px) skewX(-15deg);
+  opacity: 1;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
 }
 /*# sourceMappingURL=styles.css.map */

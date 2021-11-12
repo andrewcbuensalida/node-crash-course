@@ -615,7 +615,8 @@ body {
 	height: 100%;
 	background-color: rgb(46, 46, 46);
 	form {
-		color: aliceblue;
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		color: rgb(192, 194, 196);
 		position: relative;
 		top: 50%;
 		left: 50%;
@@ -627,19 +628,77 @@ body {
 			width: 100%;
 			margin: 5px;
 		}
+		div {
+			text-align: center;
+			margin: 0;
+			color: rgb(184, 185, 185);
+		}
 		label {
-			color: aliceblue;
+			color: rgb(202, 202, 202);
+			font-size: 1.2em;
 		}
 		input {
-			height: 50px;
+			font-size: 1.2em;
+			height: 40px;
 		}
 		textarea {
 			height: 150px;
+			font-size: 1.2em;
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
 		}
 		button {
+			position: relative;
+			left: 50%;
+			transform: translate(-50%, 0);
 			background-color: rgb(18, 114, 90);
 			height: 40px;
+			width: 150px;
 			cursor: pointer;
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+			font-size: 1.3em;
+			overflow: hidden;
+			&:before {
+				content: "";
+				display: block;
+				position: absolute;
+				background: rgba(255, 255, 255, 0.5);
+				width: 60px;
+				height: 100%;
+				left: 0;
+				top: 0;
+				opacity: 0.5;
+				filter: blur(30px);
+				transform: translateX(-100px) skewX(-15deg);
+			}
+			&:after {
+				content: "";
+				display: block;
+				position: absolute;
+				background: rgba(255, 255, 255, 0.2);
+				width: 30px;
+				height: 100%;
+				left: 30px;
+				top: 0;
+				opacity: 0;
+				filter: blur(5px);
+				transform: translateX(-100px) skewX(-15deg);
+			}
+			&:hover {
+				text-shadow: none;
+
+				background: rgb(29, 124, 100);
+				cursor: pointer;
+				&:before {
+					transform: translateX(300px) skewX(-15deg);
+					opacity: 0.6;
+					transition: 0.7s;
+				}
+				&:after {
+					transform: translateX(300px) skewX(-15deg);
+					opacity: 1;
+					transition: 0.7s;
+				}
+			}
 		}
 	}
 }
