@@ -40,10 +40,14 @@ block elements, even if they could fit side by side, are stacked on top of each 
 inline elements fit side by side horizontally. their padding doesnt influence their position. cant give them a
 height or margin, but can change their size.
 they say dont use float: right or left. for layouting. use it to wrap text around it. for layouting, use inline-block instead or display:flex.
+inline elements like a tags, and spans cant set the width or height, it is set by its contents, but other inline elements like images can. inline elements ignore top and bottom margins. margins of two elements next to each other will overlap.
+for inline elements, if margin is auto, or not set, it is 0.
+box-sizing:border-box; makes the height and width account for padding and border.
+if margin-top and bottom is auto, default is 0 for block level elements.
 
 to center a div, many ways:
 
-1. display:flex the parent, also align-items:center, justify-content:center.
+1. display:flex or grid the parent, also align-items:center, justify-content:center.
 2. child has display:relative, left:50%, top:50%, transform: translate(-50%,-50%)
 3. or grid, parent gets
    display: grid;
@@ -54,12 +58,20 @@ to center a div, many ways:
    grid-column-start: 2;
    grid-row-start: 2;
    }
-4. or display:grid or flex, then child has margin:auto
+
+    but it wont work for inline elements like text because itll be on upper left of grid segment.
+
+4. or display:grid or flex, then child has margin:auto if it's just one child node. simplest.
+5. or if the size was not dynamic, top: 50%; height: 100px; margin-top:-50px
+6. or top:0;bottom:0;left:0;right:0;, margin:auto, then position absolute on child, position relative on container.
 
 to center text in a div:
 
 1. just wrap the text in a div, so itll be text in a div in a div, then display:flex on the parent.....
 2. or parent is display:table, child div has display:table-cell, and vertical-align:middle.
+3. or set the line height to the height of the container for vertical centering, then text-align:center for horizontal. not very responsive if it's more than one line.
+4. or container has display:grid, justify-content, align-items: center;
+5. or container display:grid, and if it's just one child, margin:auto.
 
 you.keepvid.tube to download videos from artgrid.io, then upload to amazon s3 for hosting.
 make the bucket public and the file public, then copy the object url. then make a video element with sourrce pointing to it.

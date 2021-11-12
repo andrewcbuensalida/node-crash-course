@@ -627,11 +627,17 @@ body .details {
 }
 
 body .details video {
-  width: 100%;
+  width: 70%;
+  position: relative;
+  border-radius: 5px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 20px);
+          transform: translate(-50%, 20px);
+  margin-top: 50px;
 }
 
 body .details .content {
-  padding: 30px;
+  padding: 20px;
 }
 
 body .details .content * {
