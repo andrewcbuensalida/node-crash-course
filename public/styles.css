@@ -668,20 +668,41 @@ body footer {
 .create-blog {
   width: 100%;
   height: 100%;
-  background-color: violet;
+  background-color: #2e2e2e;
 }
 
 .create-blog form {
+  color: aliceblue;
   position: relative;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 300px;
+  -webkit-transform: translate(-50%, -55%);
+          transform: translate(-50%, -55%);
+  width: 600px;
   height: 400px;
 }
 
 .create-blog form * {
-  margin: 20px;
+  border-radius: 5px;
+  width: 100%;
+  margin: 5px;
+}
+
+.create-blog form label {
+  color: aliceblue;
+}
+
+.create-blog form input {
+  height: 50px;
+}
+
+.create-blog form textarea {
+  height: 150px;
+}
+
+.create-blog form button {
+  background-color: #12725a;
+  height: 40px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=styles.css.map */

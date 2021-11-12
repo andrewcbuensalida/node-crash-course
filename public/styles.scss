@@ -613,16 +613,33 @@ body {
 .create-blog {
 	width: 100%;
 	height: 100%;
-	background-color: violet;
+	background-color: rgb(46, 46, 46);
 	form {
+		color: aliceblue;
 		position: relative;
 		top: 50%;
 		left: 50%;
-		transform: translate(-50%, -50%);
-		width: 300px;
+		transform: translate(-50%, -55%);
+		width: 600px;
 		height: 400px;
 		* {
-			margin: 20px;
+			border-radius: 5px;
+			width: 100%;
+			margin: 5px;
+		}
+		label {
+			color: aliceblue;
+		}
+		input {
+			height: 50px;
+		}
+		textarea {
+			height: 150px;
+		}
+		button {
+			background-color: rgb(18, 114, 90);
+			height: 40px;
+			cursor: pointer;
 		}
 	}
 }
