@@ -84,6 +84,7 @@
 
 body {
   width: 100%;
+  overflow-x: hidden;
 }
 
 body #navBar {
@@ -764,40 +765,62 @@ body .details .content .deleteDiv {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: 96px;
 }
 
 body .details .content .deleteDiv i {
-  cursor: pointer;
   font-size: 1.5em;
+  -webkit-transition-property: font-size;
+  transition-property: font-size;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+body .details .content .deleteDiv i:hover {
+  cursor: pointer;
+  font-size: 1.7em;
+  -webkit-transition-property: font-size;
+  transition-property: font-size;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 
 body .about {
   position: relative;
+  width: 100vw;
 }
 
 body .about #kite {
   background-image: url("kite.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
-  height: 92vh;
-  width: 100%;
-  position: absolute;
-  top: 45px;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background-attachment: fixed;
+  background-position-y: 45px;
 }
 
-body .about .yellow {
-  background-color: yellow;
+body .about .aboutus {
+  background-color: rgba(255, 255, 7, 0);
   position: absolute;
-  top: 45px;
-  height: 92vh;
-  width: 100%;
-  mix-blend-mode: hue;
-  -webkit-clip-path: polygon(100% 0, 100% 29%, 65% 53%, 75% 100%, 9% 100%, 0 6%);
-          clip-path: polygon(100% 0, 100% 29%, 65% 53%, 75% 100%, 9% 100%, 0 6%);
+  top: 200px;
+  width: 400px;
+  right: 50px;
+  text-align: center;
+  padding: 30px;
+  border-radius: 5px;
+  margin: 20px;
+  font-size: 50px;
+  font-family: Biko;
+}
+
+body .about .aboutus h2 {
+  color: #38ffee;
 }
 
 body .about footer {
-  position: fixed;
+  position: relative;
   bottom: 0;
   width: 100%;
 }

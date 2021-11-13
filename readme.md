@@ -51,10 +51,11 @@ to change css during runtime:
 a. set an animation.
 b. pseudo selectors like :hover, :active, :focus, etc.
 c. add a class via javascript, click eventlistener, select the element via let myElement = document.querySelector('#myID'), then myElement.classList.add("mystyle"); mystyle being the class name.
-d. if it's just one style, myElement.setAttribute("style","background-color:yellow") this will overwrite background-color but the other styles will remain.
+d. if it's just one style, myElement.setAttribute("style","background-color:yellow") this will overwrite background-color, but the other styles will remain for some reason.
 or setAttribute("class","myClass") this will overwrite all classes.
 e. or myElement.className or classList = "newClassName" will completely overwrite all the class names.
 f. or myElement.style.backgroundColor = "blue"; or myElement.style.setProperty("background-color","yellow") or myElement.style['background-color'] = "blacked";
+g. myElement.style.cssText = "color:blue; background-color:red"; if changing multiple.
 
 for responsive:
 a. @media screen and (min-width:500px){

@@ -620,42 +620,56 @@ body {
 			.deleteDiv {
 				display: flex;
 				justify-content: center;
+				height: 96px;
 				i {
-					cursor: pointer;
 					font-size: 1.5em;
+					transition-property: font-size;
+					transition-duration: 0.3s;
+					&:hover {
+						cursor: pointer;
+						font-size: 1.7em;
+						transition-property: font-size;
+						transition-duration: 0.3s;
+					}
 				}
 			}
 		}
 	}
+	overflow-x: hidden;
 	.about {
 		position: relative;
+		// overflow-y: scroll;
+		width: 100vw;
 		#kite {
 			background-image: url("kite.jpg");
 			background-repeat: no-repeat;
 			background-size: 100%;
-			height: 92vh;
-			width: 100%;
-			position: absolute;
-			top: 45px;
+			height: 100vh;
+			width: 100vw;
+			position: relative;
+			// top: 45px;
+			background-attachment: fixed;
+			background-position-y: 45px;
 		}
-		.yellow {
-			background-color: yellow;
+		.aboutus {
+			background-color: rgba(255, 255, 7, 0);
 			position: absolute;
-			top: 45px;
-			height: 92vh;
-			width: 100%;
-			mix-blend-mode: hue;
-			clip-path: polygon(
-				100% 0,
-				100% 29%,
-				65% 53%,
-				75% 100%,
-				9% 100%,
-				0 6%
-			);
+			top: 200px;
+			// height: 200px;
+			width: 400px;
+			right: 50px;
+			text-align: center;
+			padding: 30px;
+			border-radius: 5px;
+			margin: 20px;
+			font-size: 50px;
+			font-family: Biko;
+			h2 {
+				color: rgb(56, 255, 238);
+			}
 		}
 		footer {
-			position: fixed;
+			position: relative;
 			bottom: 0;
 			width: 100%;
 		}
