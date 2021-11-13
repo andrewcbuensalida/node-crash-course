@@ -233,16 +233,18 @@ $arrowColor: rgb(211, 211, 211);
 }
 body {
 	width: 100%;
-	.all #navBar {
-		animation-name: opacityToZero;
-		animation-delay: 8s;
-		animation-duration: 3s;
-		animation-fill-mode: forwards;
-		animation-direction: reverse;
+	#navBar {
 		@include navBar();
 	}
-
 	.all {
+		#navBar {
+			animation-name: opacityToZero;
+			animation-delay: 8s;
+			animation-duration: 3s;
+			animation-fill-mode: forwards;
+			animation-direction: reverse;
+			@include navBar();
+		}
 		background-color: white;
 		-ms-overflow-style: none; /* IE and Edge */
 		scrollbar-width: none; /* Firefox */

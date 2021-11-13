@@ -86,6 +86,105 @@ body {
   width: 100%;
 }
 
+body #navBar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  height: 0%;
+  font-size: 30px;
+  font-family: "Century Gothic", "Lato", sans-serif;
+}
+
+body #navBar ul {
+  background: #222422;
+  margin: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body #navBar ul a li {
+  color: #9eacaa;
+  text-align: center;
+  padding: 5px;
+  width: 200px;
+  list-style-type: none;
+  border-radius: 5px;
+  position: relative;
+  -webkit-transition: background 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out;
+  overflow: hidden;
+}
+
+body #navBar ul a li:before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  width: 60px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0.5;
+  -webkit-filter: blur(30px);
+          filter: blur(30px);
+  -webkit-transform: translateX(-100px) skewX(-15deg);
+          transform: translateX(-100px) skewX(-15deg);
+}
+
+body #navBar ul a li:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  width: 30px;
+  height: 100%;
+  left: 30px;
+  top: 0;
+  opacity: 0;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  -webkit-transform: translateX(-100px) skewX(-15deg);
+          transform: translateX(-100px) skewX(-15deg);
+}
+
+body #navBar ul a li:hover {
+  text-shadow: none;
+  background: #1d7c64;
+  cursor: pointer;
+}
+
+body #navBar ul a li:hover:before {
+  -webkit-transform: translateX(300px) skewX(-15deg);
+          transform: translateX(300px) skewX(-15deg);
+  opacity: 0.6;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+body #navBar ul a li:hover:after {
+  -webkit-transform: translateX(300px) skewX(-15deg);
+          transform: translateX(300px) skewX(-15deg);
+  opacity: 1;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+body .all {
+  background-color: white;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+  overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
 body .all #navBar {
   -webkit-animation-name: opacityToZero;
           animation-name: opacityToZero;
@@ -181,17 +280,6 @@ body .all #navBar ul a li:hover:after {
   opacity: 1;
   -webkit-transition: 0.7s;
   transition: 0.7s;
-}
-
-body .all {
-  background-color: white;
-  -ms-overflow-style: none;
-  /* IE and Edge */
-  scrollbar-width: none;
-  /* Firefox */
-  overflow-x: hidden;
-  width: 100vw;
-  height: 100vh;
 }
 
 body .all ::-webkit-scrollbar {
