@@ -86,7 +86,16 @@ body {
   width: 100%;
 }
 
-body #navBar {
+body .all #navBar {
+  -webkit-animation-name: opacityToZero;
+          animation-name: opacityToZero;
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  animation-direction: reverse;
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
@@ -96,7 +105,7 @@ body #navBar {
   font-family: "Century Gothic", "Lato", sans-serif;
 }
 
-body #navBar ul {
+body .all #navBar ul {
   background: #222422;
   margin: 0;
   -webkit-box-pack: center;
@@ -107,7 +116,7 @@ body #navBar ul {
   display: flex;
 }
 
-body #navBar ul a li {
+body .all #navBar ul a li {
   color: #9eacaa;
   text-align: center;
   padding: 5px;
@@ -120,7 +129,7 @@ body #navBar ul a li {
   overflow: hidden;
 }
 
-body #navBar ul a li:before {
+body .all #navBar ul a li:before {
   content: "";
   display: block;
   position: absolute;
@@ -136,7 +145,7 @@ body #navBar ul a li:before {
           transform: translateX(-100px) skewX(-15deg);
 }
 
-body #navBar ul a li:after {
+body .all #navBar ul a li:after {
   content: "";
   display: block;
   position: absolute;
@@ -152,13 +161,13 @@ body #navBar ul a li:after {
           transform: translateX(-100px) skewX(-15deg);
 }
 
-body #navBar ul a li:hover {
+body .all #navBar ul a li:hover {
   text-shadow: none;
   background: #1d7c64;
   cursor: pointer;
 }
 
-body #navBar ul a li:hover:before {
+body .all #navBar ul a li:hover:before {
   -webkit-transform: translateX(300px) skewX(-15deg);
           transform: translateX(300px) skewX(-15deg);
   opacity: 0.6;
@@ -166,7 +175,7 @@ body #navBar ul a li:hover:before {
   transition: 0.7s;
 }
 
-body #navBar ul a li:hover:after {
+body .all #navBar ul a li:hover:after {
   -webkit-transform: translateX(300px) skewX(-15deg);
           transform: translateX(300px) skewX(-15deg);
   opacity: 1;
@@ -175,6 +184,7 @@ body #navBar ul a li:hover:after {
 }
 
 body .all {
+  background-color: white;
   -ms-overflow-style: none;
   /* IE and Edge */
   scrollbar-width: none;
@@ -193,8 +203,8 @@ body .all .splash {
           animation-name: zIndex2-1;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  -webkit-animation-delay: 12s;
-          animation-delay: 12s;
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
   -webkit-animation-duration: 0s;
           animation-duration: 0s;
   height: 100vh;
@@ -227,8 +237,8 @@ body .all .splash video {
   z-index: 2;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  -webkit-animation-delay: 9s;
-          animation-delay: 9s;
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
   -webkit-animation-name: opacityToZero;
           animation-name: opacityToZero;
   -webkit-animation-duration: 0s;
@@ -240,8 +250,8 @@ body .all .splash #mask {
   background-color: white;
   -webkit-animation-name: opacityToZero;
           animation-name: opacityToZero;
-  -webkit-animation-delay: 9s;
-          animation-delay: 9s;
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation-duration: 0s;
@@ -289,10 +299,10 @@ body .all .splash .white {
   mix-blend-mode: screen;
   -webkit-animation-name: white2black, black2white, opacityToZero;
           animation-name: white2black, black2white, opacityToZero;
-  -webkit-animation-duration: 3s, 3s, 3s;
-          animation-duration: 3s, 3s, 3s;
-  -webkit-animation-delay: 1s, 6s, 9s;
-          animation-delay: 1s, 6s, 9s;
+  -webkit-animation-duration: 3s, 2s, 3s;
+          animation-duration: 3s, 2s, 3s;
+  -webkit-animation-delay: 1s, 6s, 8s;
+          animation-delay: 1s, 6s, 8s;
   -webkit-animation-fill-mode: forwards, forwards;
           animation-fill-mode: forwards, forwards;
 }
@@ -302,6 +312,15 @@ body .all .blogs {
       scroll-snap-type: y mandatory;
   overflow-y: scroll;
   height: 100vh;
+  -webkit-animation-name: opacityToZero;
+          animation-name: opacityToZero;
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  animation-direction: reverse;
 }
 
 body .all .blogs .blog {

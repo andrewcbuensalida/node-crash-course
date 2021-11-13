@@ -204,36 +204,46 @@ $arrowColor: rgb(211, 211, 211);
 	text-decoration: none;
 	color: black;
 }
-body {
-	width: 100%;
-	#navBar {
-		position: sticky;
-		top: 0px;
-		z-index: 1;
-		height: 0%;
-		font-size: 30px;
-		font-family: "Century Gothic", "Lato", sans-serif;
-		ul {
-			background: rgb(34, 36, 34);
-			margin: 0;
-			justify-content: center;
-			display: flex;
-			a {
-				li {
-					color: rgb(158, 172, 170);
-					text-align: center;
-					padding: 5px;
-					width: 200px;
-					list-style-type: none;
-					border-radius: 5px;
-					position: relative;
-					transition: background 0.2s ease-in-out;
-					@include shimmeringButton();
-				}
+@mixin navBar {
+	position: sticky;
+	top: 0px;
+	z-index: 1;
+	height: 0%;
+	font-size: 30px;
+	font-family: "Century Gothic", "Lato", sans-serif;
+	ul {
+		background: rgb(34, 36, 34);
+		margin: 0;
+		justify-content: center;
+		display: flex;
+		a {
+			li {
+				color: rgb(158, 172, 170);
+				text-align: center;
+				padding: 5px;
+				width: 200px;
+				list-style-type: none;
+				border-radius: 5px;
+				position: relative;
+				transition: background 0.2s ease-in-out;
+				@include shimmeringButton();
 			}
 		}
 	}
+}
+body {
+	width: 100%;
+	.all #navBar {
+		animation-name: opacityToZero;
+		animation-delay: 8s;
+		animation-duration: 3s;
+		animation-fill-mode: forwards;
+		animation-direction: reverse;
+		@include navBar();
+	}
+
 	.all {
+		background-color: white;
 		-ms-overflow-style: none; /* IE and Edge */
 		scrollbar-width: none; /* Firefox */
 		::-webkit-scrollbar {
@@ -246,7 +256,7 @@ body {
 		.splash {
 			animation-name: zIndex2-1;
 			animation-fill-mode: forwards;
-			animation-delay: 12s;
+			animation-delay: 8s;
 			animation-duration: 0s;
 			height: 100vh;
 			position: absolute;
@@ -266,7 +276,7 @@ body {
 				position: fixed;
 				z-index: 2;
 				animation-fill-mode: forwards;
-				animation-delay: 9s;
+				animation-delay: 8s;
 				animation-name: opacityToZero;
 				animation-duration: 0s;
 			}
@@ -274,7 +284,7 @@ body {
 				z-index: 3;
 				background-color: rgb(255, 255, 255);
 				animation-name: opacityToZero;
-				animation-delay: 9s;
+				animation-delay: 8s;
 				animation-fill-mode: forwards;
 				animation-duration: 0s;
 				height: 100vh;
@@ -306,8 +316,8 @@ body {
 				background-color: white;
 				mix-blend-mode: screen;
 				animation-name: white2black, black2white, opacityToZero;
-				animation-duration: 3s, 3s, 3s;
-				animation-delay: 1s, 6s, 9s;
+				animation-duration: 3s, 2s, 3s;
+				animation-delay: 1s, 6s, 8s;
 				animation-fill-mode: forwards, forwards;
 			}
 		}
@@ -316,6 +326,11 @@ body {
 			scroll-snap-type: y mandatory;
 			overflow-y: scroll;
 			height: 100vh;
+			animation-name: opacityToZero;
+			animation-delay: 8s;
+			animation-duration: 3s;
+			animation-fill-mode: forwards;
+			animation-direction: reverse;
 			.blog {
 				// Up Arrow Swipe
 				.arrowUp {
