@@ -1,3 +1,4 @@
+const nl2br = require("nl2br");
 const Blog = require("../models/blog");
 
 const blog_index = (req, res) => {
@@ -17,7 +18,7 @@ const blog_details = (req, res) => {
 		.then((result) => {
 			console.log(`This is(result`);
 			console.log(result);
-
+			result.body = nl2br(result.body);
 			res.render("details", { blog: result, title: "Blog Details" });
 		})
 		.catch((err) => {
