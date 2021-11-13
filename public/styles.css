@@ -771,6 +771,37 @@ body .details .content .deleteDiv i {
   font-size: 1.5em;
 }
 
+body .about {
+  position: relative;
+}
+
+body .about #kite {
+  background-image: url("kite.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 92vh;
+  width: 100%;
+  position: absolute;
+  top: 45px;
+}
+
+body .about .yellow {
+  background-color: yellow;
+  position: absolute;
+  top: 45px;
+  height: 92vh;
+  width: 100%;
+  mix-blend-mode: hue;
+  -webkit-clip-path: polygon(100% 0, 100% 29%, 65% 53%, 75% 100%, 9% 100%, 0 6%);
+          clip-path: polygon(100% 0, 100% 29%, 65% 53%, 75% 100%, 9% 100%, 0 6%);
+}
+
+body .about footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
 body footer {
   background-color: #202020;
   color: white;

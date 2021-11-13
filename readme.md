@@ -44,6 +44,28 @@ inline elements like a tags, and spans cant set the width or height, it is set b
 for inline elements, if margin is auto, or not set, it is 0.
 box-sizing:border-box; makes the height and width account for padding and border.
 if margin-top and bottom is auto, default is 0 for block level elements.
+absolute, fixed positioning, border, margin shifts others. align-self, relative, static, sticky, padding, overflow, translate doesnt.
+html=onmouseover, js=mouseover, css=:hover
+
+to change css during runtime:
+a. set an animation.
+b. pseudo selectors like :hover, :active, :focus, etc.
+c. add a class via javascript, click eventlistener, select the element via let myElement = document.querySelector('#myID'), then myElement.classList.add("mystyle"); mystyle being the class name.
+d. if it's just one style, myElement.setAttribute("style","background-color:yellow") this will overwrite background-color but the other styles will remain.
+or setAttribute("class","myClass") this will overwrite all classes.
+e. or myElement.className or classList = "newClassName" will completely overwrite all the class names.
+f. or myElement.style.backgroundColor = "blue"; or myElement.style.setProperty("background-color","yellow") or myElement.style['background-color'] = "blacked";
+
+for responsive:
+a. @media screen and (min-width:500px){
+div{
+width: 200px;
+}
+}
+b. columns: 100px, 4; meaning minimum width is 100px, so if screen gets larger, width will expand but max columns is 4, but if it gets smaller, width will shrink then when width gets to below 100px it'll remove a column.
+c. min-width: 200px; element starts big, but when screen gets too skinny, element wont shrink anymore.
+d. flex.
+e. width: min()
 
 to center a div, many ways:
 
@@ -72,6 +94,7 @@ to center text in a div:
 3. or set the line height to the height of the container for vertical centering, then text-align:center for horizontal. not very responsive if it's more than one line.
 4. or container has display:grid, justify-content, align-items: center;
 5. or container display:grid, and if it's just one child, margin:auto.
+6. have the padding big enough.
 
 you.keepvid.tube to download videos from artgrid.io, then upload to amazon s3 for hosting.
 make the bucket public and the file public, then copy the object url. then make a video element with sourrce pointing to it.
