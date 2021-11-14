@@ -99,7 +99,7 @@ to center text in a div:
 
 you.keepvid.tube to download videos from artgrid.io, then upload to amazon s3 for hosting.
 make the bucket public and the file public, then copy the object url. then make a video element with sourrce pointing to it.
-dont need to download or upload to s3, could get it from pexels. right click on video, view frame source, then find the mp4.
+dont need to download or upload to s3, could get it from pexels. right click on video, view frame source, then find the mp4. actually this doesnt work after a day because they deny access.
 
 where to get website design inspirations: wix, wordpress, codepen.
 

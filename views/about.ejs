@@ -5,12 +5,25 @@
   <%- include("./partials/nav.ejs") %>
 
   <div class="about">
-    <div id='kite'></div>
+    <img id='bulb' src="bulb.jpg"></img>
+    <div class='hoverMask'>
+      <div class="light">
+      </div>
+    </div>
+    
     <div class="aboutus">
       <h2>About Us</h2>
     </div>
-    <p>Please check out my portfolio at <a href='http://www.anhonestobserver.com'>http://www.anhonestobserver.com</a>, my LinkedIn at <a href='https://www.linkedin.com/in/andrewcbuensalida/'>https://www.linkedin.com/in/andrewcbuensalida/</a>', and my GitHub at <a href="https://github.com/andrewcbuensalida">https://github.com/andrewcbuensalida</a>. I have built full-stack websites/web applications such as an Instagram clone, web scrapers, games, and machine learning apps, with front-end technologies such as React and back-end servers such as Node, together with databases such as MongoDB, PostgreSQL, Firebase, all hosted in cloud platforms such as Amazon Web Services and Google Cloud Platform.</p>
-    <%- include("./partials/footer.ejs") %>
+    <div id='about2'>
+      <h1>Hello.</h1> 
+      My name is Andrew and I'm a software developer. 
+      <div>
+        <a href="https://github.com/andrewcbuensalida"><img src="github.png" alt="" srcset=""></a>
+        <a href="https://www.linkedin.com/in/andrewcbuensalida/"><img src="linkedin.png" alt="" srcset=""></a>
+      </div>
+    </div>
+
+    <!-- <%- include("./partials/footer.ejs") %> -->
   </div>
 
 </body>

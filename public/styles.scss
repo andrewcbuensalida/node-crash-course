@@ -117,6 +117,7 @@
 // 		color: blue;
 // 	}
 // }
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
 @mixin shimmeringButton {
 	overflow: hidden;
 	&:before {
@@ -160,6 +161,18 @@
 			opacity: 1;
 			transition: 0.7s;
 		}
+	}
+}
+@keyframes lowerBulb {
+	from {
+		top: -700px;
+		left: -600px;
+		width: 200vw;
+	}
+	to {
+		top: -350px;
+		left: 0px;
+		width: 100vw;
 	}
 }
 $arrowColor: rgb(211, 211, 211);
@@ -636,49 +649,85 @@ body {
 		}
 	}
 	overflow-x: hidden;
+	overflow-y: hidden;
 	.about {
 		position: relative;
-		// overflow-y: scroll;
 		width: 100vw;
-		#kite {
-			background-image: url("kite.jpg");
-			background-repeat: no-repeat;
-			background-size: 100%;
-			height: 100vh;
-			width: 100vw;
-			position: relative;
-			// top: 45px;
-			background-attachment: fixed;
-			background-position-y: 45px;
+		#bulb {
+			animation-name: lowerBulb;
+			animation-duration: 5s;
+			animation-fill-mode: forwards;
+			position: absolute;
+			z-index: -1;
 		}
+		.hoverMask {
+			position: absolute;
+			left: 35%;
+			top: 10%;
+			width: 30%;
+			height: 70%;
+			.light {
+				position: absolute;
+				left: 52%;
+				top: 25%;
+				width: 0px;
+				height: 50%;
+				transition-property: box-shadow;
+				transition-duration: 0.8s;
+			}
+			&:hover .light {
+				position: absolute;
+				left: 52%;
+				top: 25%;
+				width: 0px;
+				height: 50%;
+				box-shadow: 0 0 200px 100px rgb(245, 255, 187);
+				transition-property: box-shadow;
+				transition-duration: 0.8s;
+			}
+		}
+
 		.aboutus {
 			background-color: rgba(255, 255, 7, 0);
 			position: absolute;
-			top: 200px;
+			top: 150px;
 			// height: 200px;
 			width: 400px;
-			right: 50px;
+			right: 0vw;
 			text-align: center;
 			padding: 30px;
 			border-radius: 5px;
 			margin: 20px;
 			font-size: 50px;
-			font-family: Biko;
+			font-family: "Comfortaa", cursive;
 			h2 {
-				color: rgb(56, 255, 238);
+				color: rgb(59, 59, 59);
 			}
 		}
-		footer {
+		#about2 {
+			font-family: "Comfortaa", cursive;
+
 			position: relative;
-			bottom: 0;
-			width: 100%;
+			height: 100vh;
+			width: 40vw;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding: 30px;
+			// text-indent: 50px;
+			font-size: 25px;
+			text-align: right;
+			* {
+				line-height: 100px;
+				align-self: flex-end;
+				// padding: 20px;
+			}
+			img {
+				width: 40px;
+				border-radius: 3px;
+			}
 		}
-	}
-	footer {
-		background-color: rgb(32, 32, 32);
-		color: white;
-		text-align: center;
-		position: relative;
 	}
 }
 
