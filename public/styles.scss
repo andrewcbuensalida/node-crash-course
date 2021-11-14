@@ -658,9 +658,10 @@ body {
 			}
 		}
 	}
-	overflow-x: hidden;
-	overflow-y: hidden;
+
 	.about {
+		overflow-x: hidden;
+		overflow-y: hidden;
 		position: relative;
 		width: 100vw;
 		#bulb {

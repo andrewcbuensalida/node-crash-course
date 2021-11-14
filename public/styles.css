@@ -136,8 +136,6 @@
 
 body {
   width: 100%;
-  overflow-x: hidden;
-  overflow-y: hidden;
 }
 
 body #navBar {
@@ -839,6 +837,8 @@ body .details .content .deleteDiv i:hover {
 }
 
 body .about {
+  overflow-x: hidden;
+  overflow-y: hidden;
   position: relative;
   width: 100vw;
 }
