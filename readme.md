@@ -44,8 +44,11 @@ inline elements like a tags, and spans cant set the width or height, it is set b
 for inline elements, if margin is auto, or not set, it is 0.
 box-sizing:border-box; makes the height and width account for padding and border.
 if margin-top and bottom is auto, default is 0 for block level elements.
+auto means the margin will take up the available space. so margin-right: auto means the element will move to the left.
 absolute, fixed positioning, border, margin shifts others. align-self, relative, static, sticky, padding, overflow, translate doesnt.
 html=onmouseover, js=mouseover, css=:hover
+if a flex item has flex-grow of 1, and another item has flex-grow of 2, first item will get half of the empty space of second.
+ways to mask aka cut out text from an image or vice versa, mix-blend-mode, mask-image, background-clip,
 
 to change css during runtime:
 a. set an animation.
@@ -106,3 +109,5 @@ where to get website design inspirations: wix, wordpress, codepen.
 todo:
 paragraph line breaks
 about page
+
+workflow is just push to github and app engine should deploy it. in development, uncomment livejs in head.
