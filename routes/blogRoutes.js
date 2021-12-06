@@ -4,6 +4,7 @@ const blogController = require("../controllers/blogController");
 
 const router = express.Router();
 
+// limiter is middleware that fires handler if max is exceeded within windowMs
 const limiter = rateLimit({
 	windowMs: 20 * 1000,
 	max: 1, // limit each IP to 1 requests per windowMs

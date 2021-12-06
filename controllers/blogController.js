@@ -1,6 +1,8 @@
+// converts \n to <br>
 const nl2br = require("nl2br");
 const Blog = require("../models/blog");
 
+// main homepage, gets all blogs from mongodb then sends it toe ejs
 const blog_index = (req, res) => {
 	Blog.find()
 		.sort({ createdAt: -1 })
@@ -13,11 +15,10 @@ const blog_index = (req, res) => {
 };
 
 const blog_details = (req, res) => {
+	// params from the url route parameters, like /user/:name   can get name with req.params.name
 	const id = req.params.id;
 	Blog.findById(id)
 		.then((result) => {
-			console.log(`This is(result`);
-			console.log(result);
 			result.body = nl2br(result.body);
 			res.render("details", { blog: result, title: "Blog Details" });
 		})
@@ -38,6 +39,7 @@ const blog_create_post = (req, res) => {
 			limit: "Limit reached. Only 1 new blog per 20 seconds.",
 		});
 	}
+	// create new Blog object then save it to mongodb
 	const blog = new Blog(req.body);
 	blog.save()
 		.then((result) => {
